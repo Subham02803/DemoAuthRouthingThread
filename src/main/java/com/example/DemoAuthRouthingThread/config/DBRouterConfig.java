@@ -21,7 +21,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 @EnableTransactionManagement
 @EnableJpaRepositories(entityManagerFactoryRef = "dbRouterEntityManagerFactory", basePackages = {
-		"com.example.DemoThread.auth.dao" }, transactionManagerRef = "dbRouterTransactionManager")
+		"com.example.DemoAuthRouthingThread.auth.dao" }, transactionManagerRef = "dbRouterTransactionManager")
 public class DBRouterConfig {
 
 	@Bean(name = "dbRouterDataSource")
@@ -36,8 +36,8 @@ public class DBRouterConfig {
 		Map<String, Object> properties = new HashMap<>();
 		properties.put("hibernate.hbm2ddl.auto", "update");
 		properties.put("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
-		return builder.dataSource(dataSource).properties(properties).packages("com.example.DemoThread.auth.model")
-				.persistenceUnit("auth").build();
+		return builder.dataSource(dataSource).properties(properties)
+				.packages("com.example.DemoAuthRouthingThread.auth.model").persistenceUnit("auth").build();
 	}
 
 	@Bean(name = "dbRouterTransactionManager")
