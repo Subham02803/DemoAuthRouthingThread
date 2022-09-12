@@ -10,8 +10,8 @@
 	<groupId>com.example</groupId>
 	<artifactId>DemoAuthRouthingThread</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>DemoThread</name>
-	<description>Demo project for Spring Boot</description>
+	<name>DemoAuthRouthingThread</name>
+	<description>Spring boot security db routing and Thread</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
